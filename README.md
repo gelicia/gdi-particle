@@ -19,3 +19,11 @@ An express / node server runs to expose an API without exposing the Particle acc
 1. Run `npm start`
 1. Go to [http://localhost:3000/](http://localhost:3000/)
 ### Details
+- Two endpoints are exposed that passthrough to the Particle API
+    - `temperature` gets the value from the temperature sensor
+    - `setLED` sets an LED to a color, using params in a form
+        - `ledIdx` is the address of the LED (starting at 0)
+        - `ledR` is the red value to send (0-255)
+        - `ledG` is the green value to send (0-255)
+        - `ledB` is the blue value to send (0-255)
+ - The public/ directory is served as a static webpage and is intended to have a UI to interact with the endpoints.
