@@ -1,0 +1,23 @@
+{
+  "name": "gdi-particle",
+  "version": "1.0.0",
+  "description": "An example express app showing how to toggle lights and read input",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gelicia@github.com/gelicia/gdi-particle.git"
+  },
+  "author": "Kristina Durivage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gelicia/gdi-particle/issues"
+  },
+  "homepage": "https://github.com/gelicia/gdi-particle",
+  "dependencies": {
+    "express": "^4.16.2",
+    "serve-static": "^1.13.2"
+  }
+}
