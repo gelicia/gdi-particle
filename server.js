@@ -11,8 +11,8 @@ app.use(express.static('public', {'index': ['index.html', 'index.htm']}));
 
 app.get('/temperature', function (req, res) {
     rest.get('https://api.particle.io/v1/devices/' + particleInfo.deviceID + '/temp?access_token=' + particleInfo.accessToken)
-        .on('success', function(data, response) {
-            res.send(JSON.parse(data.result)).end();
+        .on('success', function(data) {
+            res.status(200).send(JSON.parse(data.result).toString());
         }).on('fail', function(data, response){
         res.status(response.statusCode).send(data).end();
     });
@@ -26,11 +26,10 @@ app.post('/setLED', urlencodedParser, function (req, res) {
 
     var argString =  ledIdx + "," + ledR + "," + ledG + "," + ledB;
 
-    rest.post('https://api.particle.io/v1/devices/' + particleInfo.deviceID + '/setPixel', {
-        data: { 'access_token': particleInfo.accessToken,
-            'args': argString}
-    }).on('success', function(data, response) {
-        res.send(data).end();
+    rest.post('https://api.particle.io/v1/devices/' + particleInfo.deviceID + '/setLED', {
+        data: { 'access_token': particleInfo.accessToken, 'args': argString}
+    }).on('success', function(data) {
+        res.status(200).send(JSON.parse(data.return_value).toString());
     }).on('fail', function(data, response){
         res.status(response.statusCode).send(data).end();
     });
