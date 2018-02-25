@@ -9,6 +9,6 @@ This is an example node/express server to show how to get data from a Particle P
 
 ## Setup (Server) 
 1. Run `npm install`
-1. Change particleInfoTEMP.js to particleInfo.js and add your Photon's device ID and access token.
+1. Rename particleInfoTEMP.js to particleInfo.js and add your Photon's device ID and access token.
 1. Run `npm start`
 1. Go to http://localhost:3000/ 
