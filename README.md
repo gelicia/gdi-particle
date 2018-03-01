@@ -1,5 +1,6 @@
 # Girl Develop It Demo
 This is an example node/express server to show how to get data from a Particle Photon and interact with it. It's meant to be as simple of an example as I can make it :) 
+Slides: http://files.gelicia.com/internet%20connected%20clothing.pdf
 
 ## Hardware
 The hardware code was written for a Particle Photon. It has a temperature sensor (DS18B20) and a strand of 5 (WS2812/Neopixel) LEDs to show input and output.
